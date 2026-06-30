@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>山东高考志愿推荐</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="panel">
+      <div class="brand">
+        <span class="mark"></span>
+        <div>
+          <h1>山东高考志愿推荐</h1>
+          <p>2026招生计划 / 2025位次 / 色弱限制</p>
+        </div>
+      </div>
+      <div class="controls">
+        <label>分数<input id="score" type="number" inputmode="numeric" placeholder="例如 590"></label>
+        <label>位次<input id="rank" type="number" inputmode="numeric" placeholder="可选，优先使用"></label>
+        <label>色弱
+          <select id="colorWeak">
+            <option value="no">否</option>
+            <option value="yes">是</option>
+          </select>
+        </label>
+        <label>省份
+          <select id="province">
+            <option value="山东">山东</option>
+          </select>
+        </label>
+        <label>数量<input id="limit" type="number" min="5" max="200" value="30"></label>
+        <button id="run">计算推荐</button>
+      </div>
+      <div class="stats">
+        <span id="dataStat">数据加载中</span>
+        <span id="rankStat">输入分数或位次</span>
+      </div>
+    </section>
+    <section class="table-panel">
+      <div class="table-head">
+        <strong>推荐结果</strong>
+        <div class="legend"><span>稳</span><span>冲</span><span>保</span></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>档位</th><th>院校</th><th>专业</th><th>计划</th><th>学费</th><th>2025分</th><th>2025位次</th><th>色弱</th><th>页码</th>
+            </tr>
+          </thead>
+          <tbody id="results"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

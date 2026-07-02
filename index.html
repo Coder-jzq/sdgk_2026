@@ -13,41 +13,62 @@
         <span class="mark"></span>
         <div>
           <h1>山东高考志愿推荐</h1>
-          <p>2026招生计划 / 2025位次 / 色弱限制</p>
+          <p>2026招生计划 / 2025三次投档参考 / 公办民办筛选 / 色弱限制</p>
         </div>
       </div>
       <div class="controls">
         <label>分数<input id="score" type="number" inputmode="numeric" placeholder="例如 590"></label>
         <label>位次<input id="rank" type="number" inputmode="numeric" placeholder="可选，优先使用"></label>
+        <label>学校/专业<input id="keyword" type="search" placeholder="输入关键词"></label>
+        <label>学校性质
+          <select id="ownership">
+            <option value="">全部</option>
+            <option value="公办">公办</option>
+            <option value="民办">民办</option>
+            <option value="中外合作办学">中外合作办学</option>
+            <option value="待人工核验">待人工核验</option>
+          </select>
+        </label>
+        <label>2025参考
+          <select id="reference">
+            <option value="">全部</option>
+            <option value="matched">有投档参考</option>
+            <option value="unmatched">无投档参考</option>
+          </select>
+        </label>
         <label>色弱
           <select id="colorWeak">
             <option value="no">否</option>
             <option value="yes">是</option>
           </select>
         </label>
-        <label>省份
-          <select id="province">
-            <option value="山东">山东</option>
-          </select>
-        </label>
-        <label>数量<input id="limit" type="number" min="5" max="200" value="30"></label>
+        <label>数量<input id="limit" type="number" min="5" max="300" value="50"></label>
         <button id="run">计算推荐</button>
       </div>
       <div class="stats">
         <span id="dataStat">数据加载中</span>
         <span id="rankStat">输入分数或位次</span>
+        <span id="filterStat">筛选未执行</span>
       </div>
     </section>
     <section class="table-panel">
       <div class="table-head">
-        <strong>推荐结果</strong>
-        <div class="legend"><span>稳</span><span>冲</span><span>保</span></div>
+        <strong>查询结果</strong>
+        <div class="legend"><span>稳</span><span>冲</span><span>保</span><span>无参考</span></div>
       </div>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>档位</th><th>院校</th><th>专业</th><th>计划</th><th>学费</th><th>2025分</th><th>2025位次</th><th>色弱</th><th>页码</th>
+              <th>档位</th>
+              <th>院校</th>
+              <th>性质</th>
+              <th>专业</th>
+              <th>计划</th>
+              <th>学费</th>
+              <th>2025参考</th>
+              <th>色弱</th>
+              <th>页码</th>
             </tr>
           </thead>
           <tbody id="results"></tbody>

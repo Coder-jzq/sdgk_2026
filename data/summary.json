@@ -1,6 +1,23 @@
 {
-  "total_rows": 9289,
-  "matched_rows": 4598,
-  "rank_map_rows": 543,
-  "source": "2026招生计划OCR + 山东省教育招生考试院2025普通类常规批第1次志愿投档表 + 2025一分一段表"
+  "total_plan_rows_2026": 9289,
+  "score_reference_rows_2025": 32962,
+  "matched_rows": 4632,
+  "unmatched_rows": 4657,
+  "school_count_2026": 900,
+  "school_type_counts": {
+    "公办": 8107,
+    "民办": 1160,
+    "待人工核验": 14,
+    "中外合作办学": 8
+  },
+  "sources": {
+    "school_type": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/t20260618_1441074.html",
+    "school_type_fallback": "https://gaokao.chsi.com.cn/gkxx/zc/moe/202506/20250627/2293393219.html",
+    "score_reference": [
+      "https://www.sdzk.cn/Floadup/file/20250719/6388855130412530367357143.xls",
+      "https://www.sdzk.cn/Floadup/file/20250728/6388931521217170972235326.xls",
+      "https://www.sdzk.cn/Floadup/file/20250801/6388966818220240355336033.xls",
+      "https://www.sdzk.cn/Floadup/file/20250625/6388646133710894671069456.xls"
+    ]
+  }
 }
